@@ -1,0 +1,31 @@
+Application Additional Binary Storage (AABS) Documentation 1. Introduction 
+
+AABS (Application Additional Binary Storage) is an advanced storage and extension system designed to work alongside applications, providing additional functionalities through a structured file system. It serves as an evolution of traditional OBB (Opaque Binary Blob) files, offering greater modularity, organization, and interaction capabilities with applications.
+
+The AABS structure is designed to store various types of files, including binary executables, scripts, configuration files, libraries, and modules. It also includes an integrated logging system that records execution details in real-time.
+
+2. Key Features Kernel-Based Execution → The AABS kernel manages all internal operations, loading and interacting with the target application. Binary & Non-Binary Storage → Supports multiple formats, including .bin, .dll, .ini, .config, .bat, and executable files. Multi-Language Support → Java, C, Python, and any other languages can be stored and managed within their respective folders. Modularity → Libraries and modules are stored separately, preventing unnecessary system clutter. Feedback Logging System → Generates logs.log, kernel_logs.log, and status.log to track execution progress and errors. Additional Support → The additional/ folder allows extended customization, supporting scripts, DLLs, and executables. 3. AABS Core Components 4. The .ARK File 
+
+The .ark (Additional Resource Kernel) is the most critical component of the AABS system. It is a compressed file that contains all essential scripts, binaries, and configurations required for AABS execution.
+
+If the .ark file is missing or corrupted, AABS will fail to start. It stores essential scripts in multiple programming languages, ensuring flexibility and functionality. Unlike the AABS folder, the .ark file has all its contents in the root structure (no subfolders). 5. Logging System 
+
+When an AABS executes successfully, a feedback/ folder is created, containing the following logs:
+
+logs.log → A real-time execution log with a maximum of 100 lines. When the limit is reached, the oldest line is deleted. kernel_logs.log → Logs specifically related to the AABS kernel. status.log → Reports on the overall status of AABS, .ark, and the target application. 6. Additional Folder 
+
+The additional/ folder is an optional directory that can enhance AABS with extra functionalities, such as:
+
+.dll → Additional dynamic libraries. .ini → Extra configuration files. .config → Extended settings for customization. .bat → Batch scripts for automation. .exe → External tools and support applications. 7. Licensing and Compliance 
+
+AABS follows the Apache 2.0 License, meaning:
+
+Any modifications must maintain the original structure of AABS. Unauthorized changes that alter the core structure will result in an "Illegal AABS" classification. Developers must respect the .ark structure, ensuring it contains the necessary resources for execution. 8. Conclusion 
+
+AABS is a powerful extension system that enhances applications through structured binary storage, modularity, and detailed logging. By maintaining its core structure and compliance with its licensing terms, AABS can provide a stable and expandable environment for application development and management.
+
+For more information, refer to LICENSE.txt and guide.txt.
+
+🔹 Final Thoughts 
+
+This document serves as the official AABS reference guide. It explains everything a developer needs to understand about how the system works, its core principles, and how to ensure compliance with its structured format.guide. It explains everything a developer needs to understand about how the system works, its core principles, and how to ensure compliance with its structured format.
